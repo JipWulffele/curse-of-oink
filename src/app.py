@@ -2,12 +2,14 @@ import sys
 from PyQt5.QtWidgets import QApplication
 from src.gui.main_window import MainWindow
 from src.camera.webcam import WebcamWorker
+from src.state.pig_state import PigLevelState
 
 def main():
     app = QApplication(sys.argv)
-    win = MainWindow()
+    state = PigLevelState()
+    win = MainWindow(state)
 
-    webcam = WebcamWorker(0)
+    webcam = WebcamWorker(0, state)
     win.set_webcam(webcam)  # give reference to MainWindow
 
     def on_frame(frame):

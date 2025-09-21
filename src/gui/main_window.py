@@ -10,14 +10,14 @@ from src.gui.widgets import MeterWidget
 
 
 class MainWindow(QMainWindow):
-    def __init__(self):
+    def __init__(self, state):
         super().__init__()
 
         self.setWindowTitle("Curse of Oink 🐷")
         self.resize(1000, 600)
 
         # Track pig level
-        self.state = PigLevelState()
+        self.state = state
 
         # Central widget
         central_widget = QWidget()
