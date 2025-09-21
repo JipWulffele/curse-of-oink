@@ -29,7 +29,7 @@ def pig_ear_left_filter(image, results):
         return image
     return overlay_sticker_from_landmarks(
         image, pig_ear_left_img, pig_ear_left_src_pts, pig_ear_left_landmarks,
-        results, "face", tip_offset=(-1.5, -1)
+        results, "face", tip_offset=(-1.5, -0.5)
     )
 
 def pig_ear_right_filter(image, results):
@@ -37,5 +37,5 @@ def pig_ear_right_filter(image, results):
         return image
     return overlay_sticker_from_landmarks(
         image, pig_ear_right_img, pig_ear_right_src_pts, pig_ear_right_landmarks,
-        results, "face", tip_offset=(1.5, -1)
+        results, "face", tip_offset=(1.5, -0.5)
     )
