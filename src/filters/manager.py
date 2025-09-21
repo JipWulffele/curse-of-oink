@@ -1,6 +1,7 @@
 from src.filters.pig_tail import pig_tail_filter
 from src.filters.pig_face import pig_nose_filter, pig_ear_left_filter, pig_ear_right_filter
 from src.filters.pig_vision import pig_vision_filter
+from src.filters.bacon_head import bacon_head_filter, pork_chop_hand_filter
 
 def apply_filters(image, results, pig_level):
     if pig_level == 0:
@@ -20,5 +21,11 @@ def apply_filters(image, results, pig_level):
         img = pig_ear_right_filter(img, results)
         img = pig_vision_filter(img, intensity=0.8, blur_ksize=3)
         return img
-    # add later levels ( 4 full pig, 5 bacon)
+    elif pig_level == 4:
+        pass
+    elif pig_level == 5:
+        img = bacon_head_filter(image, results)
+        img = pork_chop_hand_filter(image, results, side='left')
+        img = pork_chop_hand_filter(image, results, side='right')
+        return img
     return image
