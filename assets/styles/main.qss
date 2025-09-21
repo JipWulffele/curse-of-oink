@@ -1,0 +1,22 @@
+QPushButton#pigifyButton {
+    background-color: pink;
+    color: #ff99cc;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #ff69b4;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+QPushButton#pigifyButton:disabled {
+    background-color: lightgray;
+    color: #888;
+}
+
+QLabel#gameOverBanner {
+    background-color: pink;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
