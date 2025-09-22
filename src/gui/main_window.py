@@ -105,8 +105,8 @@ class MainWindow(QMainWindow):
 
     def on_resize(self, event):
         self.game_over_banner.setGeometry(
-            0,                   # x
-            self.height() // 2,  # y
+            0,                                         # x
+            self.height() // 2 - self.height() // 10,  # y
             self.width(),        # full width
             self.height() // 5   # height
         )

@@ -1,3 +1,5 @@
+# run from "curse-of-oink": python -m src.main
+
 import sys
 from PyQt5.QtWidgets import QApplication
 from src.gui.main_window import MainWindow
